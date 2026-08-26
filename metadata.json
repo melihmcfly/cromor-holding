@@ -1,0 +1,6 @@
+{
+  "name": "Cromor Holding",
+  "description": "Cromor Maden, Mimarlık ve İnşaat Grubu Resmi Kurumsal Web Platformu",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

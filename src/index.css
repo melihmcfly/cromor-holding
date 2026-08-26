@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0a0a0a;
+  --accent: #c5a358;
+  --text: #f4f4f4;
+  --muted: #888888;
+  --line: #222222;
+}
+
+@layer base {
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  }
+
+  .font-brand {
+    font-family: 'Cinzel', Georgia, serif;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a358;
+}
+
+/* Clean Minimalism Accent Utilities */
+.border-line {
+  border-color: #222222;
+}
+
+.text-accent {
+  color: #c5a358;
+}
+
+.bg-accent {
+  background-color: #c5a358;
+}
+
+.text-muted {
+  color: #888888;
+}
+
+/* Subtle architectural patterns */
+.bg-topo-pattern {
+  background-image: radial-gradient(rgba(197, 163, 88, 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-mineral-gradient {
+  background: linear-gradient(135deg, #c5a358 0%, #997849 100%);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #f4f4f4 0%, #c5a358 60%, #997849 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
