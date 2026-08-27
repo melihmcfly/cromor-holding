@@ -210,9 +210,27 @@ export const Footer: React.FC<FooterProps> = ({ lang, onSelectSector }) => {
         </motion.div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-[#222222] flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-[#888888]">
+        <div className="pt-6 border-t border-[#222222] flex flex-col sm:flex-row items-center justify-center gap-3 text-[11px] text-[#888888] mb-6 font-mono">
+          <span className="flex items-center gap-2">
+            <MapPin className="w-3.5 h-3.5 text-[#c5a358]" />
+            319 Sokak No: 116 D:2, Buca / İzmir, Türkiye
+          </span>
+          <span className="hidden sm:inline">•</span>
+          <span className="flex items-center gap-2">
+            <Mail className="w-3.5 h-3.5 text-[#c5a358]" />
+            cromor@hotmail.com
+          </span>
+          <span className="hidden sm:inline">•</span>
+          <span className="flex items-center gap-2">
+            <Phone className="w-3.5 h-3.5 text-[#c5a358]" />
+            +90 (532) 216 09 82
+          </span>
+          <span className="hidden sm:inline">•</span>
+          <span>Fax: +90 (232) 452 00 80</span>
+        </div>
+        <div className="pt-0 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-[#888888]">
           <div>
-            © {new Date().getFullYear()} CROMOR Holding A.Ş. • {lang === 'tr' ? 'Tüm Hakları Saklıdır.' : 'All Rights Reserved.'}
+            © {new Date().getFullYear()} CROMOR Madencilik, Mimarlık, Mühendislik, İnşaat, Nakliye, San. ve Tic. Ltd. Şti. • {lang === 'tr' ? 'Tüm Hakları Saklıdır.' : 'All Rights Reserved.'}
           </div>
 
           <div className="flex items-center space-x-4">

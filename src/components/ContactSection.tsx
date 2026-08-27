@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Language, Sector } from '../types';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock, 
-  Send, 
-  Building2, 
-  Mountain, 
-  Layers, 
-  CheckCircle2, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
+  Send,
+  Building2,
+  Mountain,
+  Layers,
+  CheckCircle2,
   ShieldCheck,
-  Headphones
+  Headphones,
+  Printer,
+  User
 } from 'lucide-react';
 
 interface ContactSectionProps {
@@ -33,23 +35,27 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
   const locations = [
     {
       title: { tr: 'Genel Merkez & Yönetim', en: 'Headquarters & Executive' },
-      address: 'Büyükdere Cad. No: 198, Levent Plaza Kat: 24, Levent / İstanbul',
-      phone: '+90 (212) 890 55 00',
-      email: 'genelmerkez@cromor.com.tr',
+      address: '319 Sokak No: 116 D:2, Buca / İzmir, Türkiye',
+      phone: '+90 (532) 216 09 82',
+      email: 'cromor@hotmail.com',
+      fax: '+90 (232) 452 00 80',
       icon: Building2,
     },
     {
-      title: { tr: 'Mimarlık & Tasarım Atölyesi', en: 'Architecture & Design Studio' },
-      address: 'Cevdet Paşa Cad. No: 42, Bebek / İstanbul',
-      phone: '+90 (212) 890 55 20',
-      email: 'studio@cromor.com.tr',
+      title: { tr: 'Temsilci & İmza Yetkilisi', en: 'Authorized Representative' },
+      name: 'Orhan Ünal',
+      address: '319 Sokak No: 116 D:2, Buca / İzmir, Türkiye',
+      phone: '+90 (532) 216 09 82',
+      email: 'cromor@hotmail.com',
+      fax: '+90 (232) 452 00 80',
       icon: Layers,
     },
     {
-      title: { tr: 'Maden & Ocaklar Bölge Müdürlüğü', en: 'Mining & Regional Directorate' },
-      address: 'Organize Sanayi Bölgesi Maden Cad. No: 12, Elazığ & Muğla Sahaları',
-      phone: '+90 (424) 248 90 00',
-      email: 'maden@cromor.com.tr',
+      title: { tr: 'Maden & İhracat Operasyonları', en: 'Mining & Export Operations' },
+      address: '319 Sokak No: 116 D:2, Buca / İzmir, Türkiye',
+      phone: '+90 (532) 216 09 82',
+      email: 'cromor@hotmail.com',
+      fax: '+90 (232) 452 00 80',
       icon: Mountain,
     },
   ];
@@ -116,6 +122,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
                 </div>
 
                 <div className="space-y-2 text-xs text-[#888888]">
+                  {loc.name && (
+                    <div className="flex items-center gap-2.5">
+                      <User className="w-4 h-4 text-[#c5a358] shrink-0" />
+                      <span className="text-[#f4f4f4] font-semibold">{loc.name}</span>
+                    </div>
+                  )}
                   <div className="flex items-start gap-2.5">
                     <MapPin className="w-4 h-4 text-[#c5a358] shrink-0 mt-0.5" />
                     <span>{loc.address}</span>
@@ -132,6 +144,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
                       {loc.email}
                     </a>
                   </div>
+                  {loc.fax && (
+                    <div className="flex items-center gap-2.5 font-mono">
+                      <Printer className="w-4 h-4 text-[#c5a358] shrink-0" />
+                      <span>Fax: {loc.fax}</span>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             );
@@ -301,13 +319,15 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
             {/* Direct Line Badge */}
             <div className="p-5 bg-[#0a0a0a] border border-[#222222] space-y-2">
               <div className="text-[10px] font-bold text-[#c5a358] uppercase tracking-[2px]">
-                {lang === 'tr' ? 'Hızlı Çağrı Merkezi' : 'Direct Line'}
+                {lang === 'tr' ? 'Temsilci & Doğrudan Hat' : 'Authorized Representative'}
               </div>
               <div className="text-xl font-bold text-[#f4f4f4] font-mono">
-                +90 (212) 890 55 00
+                +90 (532) 216 09 82
               </div>
-              <div className="text-[10px] text-[#888888]">
-                {lang === 'tr' ? 'Hafta içi 08:30 - 18:00 kesintisiz kurumsal hat.' : 'Direct assistance during business hours.'}
+              <div className="text-[10px] text-[#888888] space-y-1">
+                <div>Orhan Ünal — {lang === 'tr' ? 'İmza Yetkilisi' : 'Authorized Signatory'}</div>
+                <div className="font-mono">cromor@hotmail.com</div>
+                <div className="font-mono">Fax: +90 (232) 452 00 80</div>
               </div>
             </div>
 

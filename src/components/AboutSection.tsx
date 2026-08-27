@@ -54,16 +54,16 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ lang, onExploreSyner
 
           <p className="text-[#888888] text-sm sm:text-base max-w-md leading-relaxed">
             {lang === 'tr'
-              ? 'Cromor; çeyrek asırlık tecrübesiyle madencilikten mimariye, mimariden taahhüt ve inşaata uzanan entegre değer zincirinde Türkiye ve dünyada öncü çözümler sunar.'
-              : 'With over a quarter-century of heritage, Cromor stands as an integrated powerhouse spanning mining, visionary architectural design, and turnkey engineering.'}
+              ? 'Merkezi İzmir Buca’da bulunan CROMOR Madencilik, Mimarlık, Mühendislik, İnşaat, Nakliye, San. ve Tic. Ltd. Şti.; yurtiçi ve dünya genelinde maden rezervlerinin çıkarılması, nakliyesi ve pazarlamasında entegre çözümler sunmaktadır.'
+              : 'Headquartered in Buca, İzmir, CROMOR Mining, Architecture, Engineering, Construction, Transport, Industry & Trade Ltd. Co. delivers integrated solutions across mining extraction, logistics, and global marketing of mineral reserves.'}
           </p>
         </motion.div>
 
         {/* 2-Column Corporate Narrative */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
-          
+
           {/* Left Column: Visual Showcase Card */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-60px" }}
@@ -71,8 +71,8 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ lang, onExploreSyner
             className="lg:col-span-5 relative group"
           >
             <div className="relative border border-[#222222] bg-[#111111] overflow-hidden">
-              <SafeImage 
-                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=80" 
+              <SafeImage
+                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=80"
                 alt="Cromor Corporate Structure"
                 fallbackCategory="architecture"
                 className="w-full h-[460px] object-cover filter grayscale contrast-125 group-hover:scale-105 transition-transform duration-700"
@@ -85,8 +85,8 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ lang, onExploreSyner
                   {lang === 'tr' ? 'CROMOR MANİFESTOSU' : 'CROMOR MANIFESTO'}
                 </div>
                 <div className="text-[#f4f4f4] text-sm font-medium italic">
-                  "{lang === 'tr' 
-                    ? 'Maden toprağın hafızasıdır; mimarlık bu hafızayı yorumlar, inşaat ise onu geleceğe taşır.' 
+                  "{lang === 'tr'
+                    ? 'Maden toprağın hafızasıdır; mimarlık bu hafızayı yorumlar, inşaat ise onu geleceğe taşır.'
                     : 'Mining is earth\'s memory; architecture interprets it, and construction elevates it into the future.'}"
                 </div>
               </div>
@@ -94,7 +94,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ lang, onExploreSyner
           </motion.div>
 
           {/* Right Column: Narrative, Mission, Vision */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-60px" }}
@@ -105,22 +105,22 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ lang, onExploreSyner
               <p>
                 {lang === 'tr' ? (
                   <>
-                    <strong className="text-[#f4f4f4]">Cromor Grubu</strong>, maden sahalarında başlayan üretim serüvenini, kendi bünyesindeki ödüllü mimarlık ofisi ve yüksek teknolojili inşaat taahhüt filosu ile tamamlar. Doğrudan ocaktan seçtiğimiz doğal taş ve metalleri mimari estetikle biçimlendirip en zorlu mühendislik projelerinde uygulayabilen nadir entegre organizasyonlardan biriyiz.
+                    <strong className="text-[#f4f4f4]">CROMOR Madencilik, Mimarlık, Mühendislik, İnşaat, Nakliye, San. ve Tic. Ltd. Şti.</strong> başta yurtiçi olmak üzere dünya çapında işbirliğinde olduğu söz konusu olan maden rezervlerinin çıkartılması, nakliyesi ve pazarlamasında girişim ve destekleriyle faaliyet göstermektedir.
                   </>
                 ) : (
                   <>
-                    <strong className="text-[#f4f4f4]">The Cromor Group</strong> completes its mineral journey from deep subterranean quarries through our in-house architectural studio and high-capacity contracting fleet. We are among the rare integrated groups capable of quarrying raw stone, designing iconic facades, and delivering complex engineering turnkey.
+                    <strong className="text-[#f4f4f4]">CROMOR Mining, Architecture, Engineering, Construction, Transport, Industry & Trade Ltd. Co.</strong> operates primarily within Turkey and across global partner regions in the extraction, transportation, and marketing of mineral reserves.
                   </>
                 )}
               </p>
               <p>
                 {lang === 'tr' ? (
                   <>
-                    Sürdürülebilirlik, sıfır kaza hedefi ve çevreye saygı ilkeleriyle yönetilen maden ocaklarımız, hem ulusal ekonomiye yüksek katma değerli krom ihracatı sağlamakta hem de mimari projelerimiz için eşsiz nitelikte hammadde kaynağı oluşturmaktadır.
+                    Türkiye çapında kurmuş olduğu dağıtım ve satış pazarlama ağı ile müşterilerine ürün yelpazesi geniş olan maden — çıkış — ürünleri satmaktadır. Başta <strong className="text-[#f4f4f4]">krom, çinko, kurşun</strong> vs. gibi madenler olmak üzere her türlü maden çıkışı ürünlere sahip olan ve iş hacmini yükseltmek amacı ile, yurtiçinde hem sahip olduğu hem pazarlamasını üstlendiği maden ocakları — çıkışı — ürünlerini yurtiçi ve yurtdışında gerçek indirimle bedeli ile mevcut finans yeteneklerini kullanarak ihraç edecek ve firmanın satış ihracatını destekleyecektir. Çıkan ürünleri mevcut dağıtım olmak üzere geniş çapta pazarlayacaktır.
                   </>
                 ) : (
                   <>
-                    Governed by zero-incident HSE protocols and environmental rehabilitation commitments, our operations power high-value metallurgical exports while supplying distinct materials for our flagship architectural landmarks.
+                    With its nationwide distribution and sales network in Turkey, the company markets a wide range of mineral extraction products. With access to and marketing rights for <strong className="text-[#f4f4f4]">chrome, zinc, lead</strong> and other mineral outputs, the company exports its products domestically and internationally at genuine discounted prices, leveraging its financing capabilities to support the firm&apos;s export sales and distribute outputs on a broad scale.
                   </>
                 )}
               </p>
@@ -154,6 +154,39 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ lang, onExploreSyner
                     ? 'Maden, mimarlık ve inşaat üçgeninde aracıları ortadan kaldıran kusursuz kalite, güvenli çalışma ortamı ve çağdaş yapılar üretmek.'
                     : 'To eliminate supply frictions across mining, architecture, and construction, delivering zero-compromise quality and safety.'}
                 </p>
+              </div>
+            </div>
+
+            {/* Corporate Registration & Representative */}
+            <div className="p-5 bg-[#0a0a0a] border border-[#c5a358]/40 space-y-3">
+              <div className="text-[10px] font-bold text-[#c5a358] uppercase tracking-[2px]">
+                {lang === 'tr' ? 'Ticari Sicil & Temsilci Bilgileri' : 'Corporate Registration & Representative'}
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs">
+                <div>
+                  <div className="text-[#888888] mb-0.5">{lang === 'tr' ? 'Ticari Ünvan' : 'Trade Name'}</div>
+                  <div className="text-[#f4f4f4] font-medium leading-relaxed">
+                    CROMOR Madencilik, Mimarlık, Mühendislik, İnşaat, Nakliye, San. ve Tic. Ltd. Şti.
+                  </div>
+                </div>
+                <div>
+                  <div className="text-[#888888] mb-0.5">{lang === 'tr' ? 'Merkez Adresi' : 'Headquarters'}</div>
+                  <div className="text-[#f4f4f4] font-medium leading-relaxed">
+                    319 Sokak No: 116 D:2, Buca / İzmir, Türkiye
+                  </div>
+                </div>
+                <div>
+                  <div className="text-[#888888] mb-0.5">{lang === 'tr' ? 'Temsilci (İmza Yetkilisi)' : 'Authorized Signatory'}</div>
+                  <div className="text-[#f4f4f4] font-medium">Orhan Ünal</div>
+                </div>
+                <div>
+                  <div className="text-[#888888] mb-0.5">{lang === 'tr' ? 'İletişim' : 'Contact'}</div>
+                  <div className="text-[#f4f4f4] font-mono leading-relaxed">
+                    cromor@hotmail.com<br />
+                    +90 (532) 216 09 82<br />
+                    <span className="text-[#888888]">Fax: +90 (232) 452 00 80</span>
+                  </div>
+                </div>
               </div>
             </div>
 
