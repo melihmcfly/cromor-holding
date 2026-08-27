@@ -78,13 +78,13 @@ export const Navbar: React.FC<NavbarProps> = ({
             {lang === 'tr' ? 'Maden • Mimarlık • İnşaat Entegre Grubu' : 'Integrated Mining • Architecture • Construction Group'}
           </span>
           <div className="h-3 w-[1px] bg-[#222222]" />
-          <a href="tel:+902128905500" className="flex items-center gap-1.5 hover:text-[#c5a358] transition-colors text-[11px]">
+          <a href="tel:+905322160982" className="flex items-center gap-1.5 hover:text-[#c5a358] transition-colors text-[11px]">
             <Phone className="w-3 h-3 text-[#c5a358]" />
-            +90 (212) 890 55 00
+            +90 (532) 216 09 82
           </a>
-          <a href="mailto:info@cromor.com.tr" className="flex items-center gap-1.5 hover:text-[#c5a358] transition-colors text-[11px]">
+          <a href="mailto:cromor@hotmail.com" className="flex items-center gap-1.5 hover:text-[#c5a358] transition-colors text-[11px]">
             <Mail className="w-3 h-3 text-[#c5a358]" />
-            info@cromor.com.tr
+            cromor@hotmail.com
           </a>
         </div>
 
