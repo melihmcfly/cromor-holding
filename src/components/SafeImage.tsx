@@ -6,10 +6,10 @@ interface SafeImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
 
 const FALLBACK_POOLS: Record<string, string[]> = {
   mining: [
-    'https://images.unsplash.com/photo-1548430670053-f2c9ea4ed4d6?auto=format&fit=crop&w=1200&q=80',
-    'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
-    'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80',
-    'https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=1200&q=80',
+    'https://images.unsplash.com/photo-1550955106-b240bd7323f0?auto=format&fit=crop&w=1200&q=80',
+    'https://images.unsplash.com/photo-1502082553048-f009c37521d6?auto=format&fit=crop&w=1200&q=80',
+    'https://images.unsplash.com/photo-1616764565870-295740e88b38?auto=format&fit=crop&w=1200&q=80',
+    'https://images.unsplash.com/photo-1597766652871-81a88d11f47a?auto=format&fit=crop&w=1200&q=80',
   ],
   architecture: [
     'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
@@ -27,7 +27,7 @@ const FALLBACK_POOLS: Record<string, string[]> = {
     'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
     'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
     'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
-    'https://images.unsplash.com/photo-1548430670053-f2c9ea4ed4d6?auto=format&fit=crop&w=1200&q=80',
+    'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80',
   ],
 };
 

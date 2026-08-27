@@ -19,7 +19,7 @@ export const SECTOR_DETAILS: Record<string, SectorDetail> = {
       tr: 'Cromor Madencilik, Türkiye’nin zengin yeraltı kaynaklarını en ileri jeolojik tarama, açık ve kapalı ocak işletmeciliği teknikleriyle ekonomiye kazandırır. Yıllık 250.000 tonu aşan krom cevheri üretimimiz ve 18 adet doğal taş ocağımız ile dünya standartlarında hammadde ve yarı mamul tedariği sağlıyoruz.',
       en: 'Cromor Mining brings Turkey’s rich underground resources to the global economy using advanced geological surveys, underground and open-pit operations. With over 250,000 tons of chrome ore annual capacity and 18 natural stone quarries, we provide world-class raw materials.',
     },
-    heroImage: 'https://images.unsplash.com/photo-1548430670053-f2c9ea4ed4d6?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1550955106-b240bd7323f0?auto=format&fit=crop&w=1600&q=80',
     accentColor: '#C5A880',
     capabilities: [
       {
@@ -164,10 +164,10 @@ export const PROJECTS: Project[] = [
     client: { tr: 'Cromor Maden A.Ş.', en: 'Cromor Mining Corp.' },
     areaOrCapacity: { tr: '120.000 Ton / Yıl Kapasite', en: '120,000 Tons / Year Capacity' },
     status: 'completed',
-    image: 'https://images.unsplash.com/photo-1548430670053-f2c9ea4ed4d6?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1550955106-b240bd7323f0?auto=format&fit=crop&w=1200&q=80',
     gallery: [
-      'https://images.unsplash.com/photo-1548430670053-f2c9ea4ed4d6?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1548430670053-f2c9ea4ed4d6?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1550955106-b240bd7323f0?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1550955106-b240bd7323f0?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80',
     ],
     description: {
@@ -268,11 +268,11 @@ export const PROJECTS: Project[] = [
     year: '2025',
     areaOrCapacity: { tr: '60.000 m³ / Yıl Blok Üretimi', en: '60,000 m³ / Year Block Production' },
     status: 'ongoing',
-    image: 'https://images.unsplash.com/photo-1548430670053-f2c9ea4ed4d6?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1550955106-b240bd7323f0?auto=format&fit=crop&w=1200&q=80',
     gallery: [
-      'https://images.unsplash.com/photo-1548430670053-f2c9ea4ed4d6?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1548430670053-f2c9ea4ed4d6?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1548430670053-f2c9ea4ed4d6?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1550955106-b240bd7323f0?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1550955106-b240bd7323f0?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1550955106-b240bd7323f0?auto=format&fit=crop&w=1200&q=80',
     ],
     description: {
       tr: 'En son teknoloji elmas tel kesme makineleriyle donatılmış, sıfır çatlak garantili birinci sınıf beyaz, bej ve oniks bloklarının ihracatı.',
@@ -374,7 +374,7 @@ export const NEWS_ITEMS: NewsItem[] = [
       en: 'Deep geophysical core drilling has confirmed a new 1.8 million ton reserve averaging 46% Cr2O3 grade.',
     },
     readTime: '3 dk',
-    image: 'https://images.unsplash.com/photo-1548430670053-f2c9ea4ed4d6?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1550955106-b240bd7323f0?auto=format&fit=crop&w=800&q=80',
     content: {
       tr: 'Cromor Holding Madencilik Grubu, 3 yıldır sürdürdüğü modern jeolojik sondaj programının sonucunda 1.8 milyon tonluk yüksek tenörlü krom rezervine ulaştı. Tesisleşme çalışmaları derhal başlatılmıştır.',
       en: 'Following a 3-year exploration program, Cromor Mining has unlocked 1.8 million tons of high-grade chrome ore. Infrastructure setup is already underway.',
