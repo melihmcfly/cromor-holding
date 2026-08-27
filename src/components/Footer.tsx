@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Language, Sector } from '../types';
-import { 
-  ArrowUp, 
-  Mountain, 
-  Layers, 
-  Building2, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  ShieldCheck, 
-  Globe2, 
+import {
+  ArrowUp,
+  Mountain,
+  Layers,
+  Building2,
+  Mail,
+  Phone,
+  MapPin,
+  ShieldCheck,
+  Globe2,
   Send,
-  CheckCircle2
+  CheckCircle2,
+  Instagram
 } from 'lucide-react';
 
 interface FooterProps {
@@ -249,6 +250,23 @@ export const Footer: React.FC<FooterProps> = ({ lang, onSelectSector }) => {
             <span>{lang === 'tr' ? 'Yukarı Çık' : 'Top'}</span>
             <ArrowUp className="w-3.5 h-3.5" />
           </button>
+        </div>
+
+        {/* Designer Credit */}
+        <div className="pt-6 mt-6 border-t border-[#222222] flex items-center justify-center">
+          <a
+            id="designer-credit"
+            href="https://www.instagram.com/melihmcfly"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-2 text-[11px] text-[#888888] hover:text-[#c5a358] transition-colors"
+          >
+            <span>{lang === 'tr' ? 'Tasarım & Geliştirme' : 'Designed & Built by'}</span>
+            <span className="font-semibold tracking-wide text-[#f4f4f4] group-hover:text-[#c5a358] transition-colors">
+              Melih Mcfly
+            </span>
+            <Instagram className="w-3.5 h-3.5 text-[#c5a358] group-hover:scale-110 transition-transform" />
+          </a>
         </div>
 
       </div>
