@@ -6,6 +6,12 @@ interface SafeImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   overlayGradient?: string;
 }
 
+/** Category-based CSS gradients — NEVER break, always visible as fallback */
+const CATEGORY_GRADIENTS: Record<string, string> = {
+  mining:
+    'linear-gradient(135deg, #2a2320 0%, #3d352f 40%, #1e1a18 70%, #2b2520 100%)',
+};
+
 const FALLBACK_POOLS: Record<string, string[]> = {
   mining: [], // ⚠️ CDN görselleri kaldırılıyor — kendi fotoğraflarınızı public/images/ altına koyun
   architecture: [
@@ -38,13 +44,10 @@ export const SafeImage: React.FC<SafeImageProps> = ({
 }) => {
   const pool = FALLBACK_POOLS[fallbackCategory] || FALLBACK_POOLS.general;
 
-  // Category-based overlay gradients — NEVER break (CSS-only)
-  const OVERLAY_GRADIENTS: Record<string, string> = {
-    mining: 'linear-gradient(135deg, #2a2320 0%, #3d352f 40%, #1e1a18 70%, #2b2520 100%)',
-  };
+  // Always show category gradient — never rely on props being passed
+  const activeGradient = overlayGradient || CATEGORY_GRADIENTS[fallbackCategory];
 
   const initialSource = src && src.trim() !== '' ? src : (pool.length > 0 ? pool[0] : '');
-  const activeGradient = overlayGradient || OVERLAY_GRADIENTS[fallbackCategory];
 
   const [currentSrc, setCurrentSrc] = useState<string>(initialSource);
   const [hasError, setHasError] = useState<boolean>(false);
@@ -75,14 +78,15 @@ export const SafeImage: React.FC<SafeImageProps> = ({
 
   return (
     <div className="relative w-full h-full overflow-hidden">
-      {/* CSS gradient overlay layer — NEVER breaks */}
-      {activeGradient && (
-        <div
-          className="absolute inset-0 z-0"
-          style={{ background: activeGradient, transition: 'opacity 1s ease-in-out' }}
-        />
-      )}
-      {/* Image layer — sits on top of gradient when available */}
+      {/* CSS gradient overlay layer — ALWAYS renders, NEVER breaks */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          background: activeGradient || 'linear-gradient(135deg, #1e1a18 0%, #2b2520 100%)',
+          transition: 'opacity 1s ease-in-out',
+        }}
+      />
+      {/* Image layer — sits on top of gradient when available and loading */}
       {!hasError && currentSrc && (
         <img
           src={currentSrc}
