@@ -33,6 +33,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  // Granite/stone-textured gradient — NEVER breaks (CSS-only)
+  const MINING_GRADIENT = 'linear-gradient(135deg, #2a2320 0%, #3d352f 40%, #1e1a18 70%, #2b2520 100%)';
+
   const heroSlides = [
     {
       sectorKey: 'all',
@@ -118,10 +121,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           }`}
           style={{ transitionProperty: 'opacity, transform' }}
         >
-          <SafeImage 
-            src={slide.image} 
+          <SafeImage
+            src={slide.image}
             alt="Cromor Hero Backdrop"
             fallbackCategory={slide.category}
+            overlayGradient={slide.category === 'mining' ? MINING_GRADIENT : undefined}
             className="w-full h-full object-cover object-center filter grayscale contrast-125"
           />
         </div>

@@ -2,15 +2,12 @@ import React, { useState, useEffect } from 'react';
 
 interface SafeImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   fallbackCategory?: 'mining' | 'architecture' | 'construction' | 'general';
+  /** CSS gradient applied behind the image (never breaks) */
+  overlayGradient?: string;
 }
 
 const FALLBACK_POOLS: Record<string, string[]> = {
-  mining: [
-    'https://images.unsplash.com/photo-1578654196409-98fb1aa484db?auto=format&fit=crop&w=1200&q=80',
-    'https://images.unsplash.com/photo-1604148039380-2b2e1e48c3b4?auto=format&fit=crop&w=1200&q=80',
-    'https://images.unsplash.com/photo-1578654196409-98fb1aa484db?auto=format&fit=crop&w=1200&q=80',
-    'https://images.unsplash.com/photo-1617575521317-d6031f387c42?auto=format&fit=crop&w=1200&q=80',
-  ],
+  mining: [], // ⚠️ CDN görselleri kaldırılıyor — kendi fotoğraflarınızı public/images/ altına koyun
   architecture: [
     'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
     'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
@@ -35,47 +32,69 @@ export const SafeImage: React.FC<SafeImageProps> = ({
   src,
   alt = 'Cromor Asset',
   fallbackCategory = 'general',
+  overlayGradient,
   className = '',
   ...props
 }) => {
   const pool = FALLBACK_POOLS[fallbackCategory] || FALLBACK_POOLS.general;
-  const initialSource = src && src.trim() !== '' ? src : pool[0];
+
+  // Category-based overlay gradients — NEVER break (CSS-only)
+  const OVERLAY_GRADIENTS: Record<string, string> = {
+    mining: 'linear-gradient(135deg, #2a2320 0%, #3d352f 40%, #1e1a18 70%, #2b2520 100%)',
+  };
+
+  const initialSource = src && src.trim() !== '' ? src : (pool.length > 0 ? pool[0] : '');
+  const activeGradient = overlayGradient || OVERLAY_GRADIENTS[fallbackCategory];
 
   const [currentSrc, setCurrentSrc] = useState<string>(initialSource);
+  const [hasError, setHasError] = useState<boolean>(false);
   const [retryIndex, setRetryIndex] = useState<number>(0);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     if (src && src.trim() !== '') {
       setCurrentSrc(src);
+      setHasError(false);
       setRetryIndex(0);
-    } else {
+    } else if (pool.length > 0) {
       setCurrentSrc(pool[0]);
+      setHasError(false);
     }
   }, [src, fallbackCategory]);
 
   const handleError = () => {
-    if (retryIndex < pool.length) {
+    if (pool.length > 0 && retryIndex < pool.length) {
       const nextFallback = pool[retryIndex];
       setRetryIndex((prev) => prev + 1);
       setCurrentSrc(nextFallback);
     } else {
-      // Guaranteed generic fallback
-      setCurrentSrc(FALLBACK_POOLS.general[0]);
+      // All fallbacks failed — image area becomes transparent (gradient behind handles it)
+      setHasError(true);
     }
   };
 
   return (
-    <img
-      src={currentSrc}
-      alt={alt}
-      onError={handleError}
-      onLoad={() => setIsLoaded(true)}
-      loading="lazy"
-      referrerPolicy="no-referrer"
-      className={`${className} transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-85'}`}
-      {...props}
-    />
+    <div className="relative w-full h-full overflow-hidden">
+      {/* CSS gradient overlay layer — NEVER breaks */}
+      {activeGradient && (
+        <div
+          className="absolute inset-0 z-0"
+          style={{ background: activeGradient, transition: 'opacity 1s ease-in-out' }}
+        />
+      )}
+      {/* Image layer — sits on top of gradient when available */}
+      {!hasError && currentSrc && (
+        <img
+          src={currentSrc}
+          alt={alt}
+          onError={handleError}
+          onLoad={() => setIsLoaded(true)}
+          loading="lazy"
+          referrerPolicy="no-referrer"
+          className={`absolute inset-0 z-10 w-full h-full object-cover transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-85'} ${className}`}
+          {...props}
+        />
+      )}
+    </div>
   );
 };
-
