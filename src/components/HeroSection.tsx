@@ -60,7 +60,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         tr: 'Yüksek tenörlü krom cevheri, birinci sınıf seleksiyon mermerler ve endüstriyel mineralleri modern ve sürdürülebilir yöntemlerle yeryüzüne kazandırıyoruz.',
         en: 'Extracting high-grade chrome ore, bespoke natural stones, and industrial minerals through sustainable extraction protocols.',
       },
-      image: 'https://images.unsplash.com/photo-1550955106-b240bd7323f0?auto=format&fit=crop&w=1920&q=85',
+      image: 'https://images.unsplash.com/photo-1604148039380-2b2e1e48c3b4?auto=format&fit=crop&w=1920&q=85',
       badge: { tr: 'Cromor Madencilik Grubu', en: 'Cromor Mining Division' },
       highlight: { tr: 'Yıllık 250.000+ Ton Krom & 18 Ruhsatlı Ocak', en: '250,000+ Tons Chrome Ore / Year' },
     },

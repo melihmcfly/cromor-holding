@@ -32,7 +32,7 @@ export const IntegratedSynergy: React.FC<IntegratedSynergyProps> = ({ lang, onOp
       },
       icon: Mountain,
       category: 'mining' as const,
-      image: 'https://images.unsplash.com/photo-1550955106-b240bd7323f0?auto=format&fit=crop&w=1000&q=80',
+      image: 'https://images.unsplash.com/photo-1604148039380-2b2e1e48c3b4?auto=format&fit=crop&w=1000&q=80',
       bullets: [
         { tr: 'Aracısız doğrudan ocaktan tedarik gücü', en: 'Direct quarry-to-project supply chain' },
         { tr: 'Sıkı laboratuvar tenör ve dayanım analizleri', en: 'Rigorous laboratory grade testing' },

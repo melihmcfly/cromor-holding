@@ -6,10 +6,10 @@ interface SafeImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
 
 const FALLBACK_POOLS: Record<string, string[]> = {
   mining: [
-    'https://images.unsplash.com/photo-1550955106-b240bd7323f0?auto=format&fit=crop&w=1200&q=80',
-    'https://images.unsplash.com/photo-1502082553048-f009c37521d6?auto=format&fit=crop&w=1200&q=80',
-    'https://images.unsplash.com/photo-1616764565870-295740e88b38?auto=format&fit=crop&w=1200&q=80',
-    'https://images.unsplash.com/photo-1597766652871-81a88d11f47a?auto=format&fit=crop&w=1200&q=80',
+    'https://images.unsplash.com/photo-1578654196409-98fb1aa484db?auto=format&fit=crop&w=1200&q=80',
+    'https://images.unsplash.com/photo-1604148039380-2b2e1e48c3b4?auto=format&fit=crop&w=1200&q=80',
+    'https://images.unsplash.com/photo-1578654196409-98fb1aa484db?auto=format&fit=crop&w=1200&q=80',
+    'https://images.unsplash.com/photo-1617575521317-d6031f387c42?auto=format&fit=crop&w=1200&q=80',
   ],
   architecture: [
     'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
