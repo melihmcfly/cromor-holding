@@ -17,7 +17,28 @@
       "Bash(npx tsc *)",
       "Bash(git init *)",
       "Bash(git add *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(git branch *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Bash(git pull *)",
+      "Bash(vercel --version)",
+      "Bash(npm install *)",
+      "Bash(vercel login *)",
+      "Bash(vercel *)",
+      "Bash(dig cromor.com.tr ANY +short)",
+      "Bash(dig cromor.com.tr NS +short)",
+      "Bash(nslookup cromor.com.tr)",
+      "Bash(nslookup *)",
+      "WebFetch(domain:cromor.com.tr)",
+      "Bash(curl -sIL https://cromor.com.tr)",
+      "Bash(curl -v https://cromor.com.tr)",
+      "Bash(curl -sv https://cromor.com.tr)",
+      "Bash(curl -s https://cromor.com.tr --max-time 10)",
+      "Bash(curl -sIL --max-time 10 https://www.cromor.com.tr)",
+      "Bash(curl -sI https://cromor.com.tr --max-time 10)",
+      "Bash(curl -sI https://www.cromor.com.tr --max-time 10)",
+      "WebSearch"
     ]
   }
 }

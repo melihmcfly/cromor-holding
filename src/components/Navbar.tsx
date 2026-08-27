@@ -78,7 +78,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             {lang === 'tr' ? 'Maden • Mimarlık • İnşaat Entegre Grubu' : 'Integrated Mining • Architecture • Construction Group'}
           </span>
           <div className="h-3 w-[1px] bg-[#222222]" />
-          <a href="tel:+905322160982" className="flex items-center gap-1.5 hover:text-[#c5a358] transition-colors text-[11px]">
+          <a href="https://wa.me/905322160982?text=Hello%2C%20I%20would%20like%20information%20about%20Cromor%20Maden%20%26%20Natural%20Resources.%0A-Thank%20you" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-[#c5a358] transition-colors text-[11px]">
             <Phone className="w-3 h-3 text-[#c5a358]" />
             +90 (532) 216 09 82
           </a>

@@ -32,7 +32,7 @@ export const IntegratedSynergy: React.FC<IntegratedSynergyProps> = ({ lang, onOp
       },
       icon: Mountain,
       category: 'mining' as const,
-      image: 'https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&fit=crop&w=1000&q=80',
+      image: 'https://images.unsplash.com/photo-1548430670053-f2c9ea4ed4d6?auto=format&fit=crop&w=1000&q=80',
       bullets: [
         { tr: 'Aracısız doğrudan ocaktan tedarik gücü', en: 'Direct quarry-to-project supply chain' },
         { tr: 'Sıkı laboratuvar tenör ve dayanım analizleri', en: 'Rigorous laboratory grade testing' },
@@ -66,7 +66,7 @@ export const IntegratedSynergy: React.FC<IntegratedSynergyProps> = ({ lang, onOp
       },
       icon: Building2,
       category: 'construction' as const,
-      image: 'https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=1000&q=80',
+      image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=80',
       bullets: [
         { tr: 'Zamanında ve sözleşmeye tam sadık teslimat', en: 'On-schedule, zero-variance delivery' },
         { tr: 'Sismik izolatörlü ve yüksek dayanımlı statik', en: 'Seismic isolated high-durability structures' },
