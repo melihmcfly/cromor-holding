@@ -32,7 +32,7 @@ export const IntegratedSynergy: React.FC<IntegratedSynergyProps> = ({ lang, onOp
       },
       icon: Mountain,
       category: 'mining' as const,
-      image: 'https://images.unsplash.com/photo-1604148039380-2b2e1e48c3b4?auto=format&fit=crop&w=1000&q=80',
+      image: '/images/krom-maden.jpg',
       bullets: [
         { tr: 'Aracısız doğrudan ocaktan tedarik gücü', en: 'Direct quarry-to-project supply chain' },
         { tr: 'Sıkı laboratuvar tenör ve dayanım analizleri', en: 'Rigorous laboratory grade testing' },
@@ -49,7 +49,7 @@ export const IntegratedSynergy: React.FC<IntegratedSynergyProps> = ({ lang, onOp
       },
       icon: Layers,
       category: 'architecture' as const,
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80',
+      image: '/images/mermer-mimarlik.jpg',
       bullets: [
         { tr: 'Doğal malzeme odaklı özgün cephe detayları', en: 'Material-driven bespoke facade engineering' },
         { tr: '3D Dijital ikiz ve enerji simülasyonları', en: '3D Digital twins and energy simulations' },
@@ -66,7 +66,7 @@ export const IntegratedSynergy: React.FC<IntegratedSynergyProps> = ({ lang, onOp
       },
       icon: Building2,
       category: 'construction' as const,
-      image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=80',
+      image: '/images/insaat-inisi.jpg',
       bullets: [
         { tr: 'Zamanında ve sözleşmeye tam sadık teslimat', en: 'On-schedule, zero-variance delivery' },
         { tr: 'Sismik izolatörlü ve yüksek dayanımlı statik', en: 'Seismic isolated high-durability structures' },
@@ -83,7 +83,7 @@ export const IntegratedSynergy: React.FC<IntegratedSynergyProps> = ({ lang, onOp
       },
       icon: Leaf,
       category: 'general' as const,
-      image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1000&q=80',
+      image: '/images/proje-maden-1.jpg',
       bullets: [
         { tr: 'Aktif saha ağaçlandırma ve biyoçeşitlilik', en: 'Active reforestation & biodiversity restoration' },
         { tr: 'Güneş enerjisiyle temiz elektrik üretimi', en: 'Solar powered facilities' },
